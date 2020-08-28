@@ -1,5 +1,8 @@
 # 8-bitt-adder-implementation-in-python
 
+![alt text](https://github.com/Crazz-Zaac/8-bit-adder-implementation-in-python/blob/master/adder_model.png)
+
+
 
 ## Installing the essentials
 ```bash
