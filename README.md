@@ -4,12 +4,13 @@
 
 
 
-## Installing the essentials
+## Essentials
+First create a virtual environment for python3. Then install pytest
 ```bash
 python3 -m pip install pytest
 ```
 
-## Running the program
+## Executing the program
 Run the program being inside the main directory
 ```bash
 python3 adder.py
