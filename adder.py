@@ -54,7 +54,7 @@ def notGate(n):
 		return 0
 
 def orGate(a, b):
-	if a == 1 or b == 1::
+	if a == 1 or b == 1:
 		return 1
 	else:
 		return 0
@@ -113,12 +113,22 @@ def calculation(num1, num2):
 
 if __name__ == '__main__':
 	while True:
-		num1 = eval(input("Enter first number: "))
-		num2 = eval(input("Enter second number: "))
-		if (num1 <= 255 and num2 <= 255) or (num1 >= 0 and num2 >= 0):
-			calculation(num1, num2)
-		else:
-			print("Please enter a valid (value between 0 and 255)")
-		choice = input("Do you continue? y/n: ")
+		num1 = input("Enter first number(0-255): ")
+		num2 = input("Enter second number(0-255): ")
+		try:
+			#confirming that the input is not string
+			num1 = int(num1)
+			num2 = int(num2)
+
+			#confirming that the value lies exactly between 0 and 255
+			if (num1 <= 255 and num2 <= 255) and (num1 >= 0 and num2 >= 0):
+				calculation(num1, num2)
+			else:
+				print('Expected value between 0 and 255. But {} and {} was given.'.format(num1, num2))
+		
+		except (ValueError, AttributeError):
+			print('Expected integer value between 0 and 255. But {} and {} was given.'.format(num1, num2))
+
+		choice = input("Do you want to continue? y/n: ")
 		if choice == "n":
 			break
