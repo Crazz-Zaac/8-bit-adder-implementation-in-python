@@ -154,8 +154,8 @@ def calculation(num1, num2):
 	pos = -1
 	first_val = list(intoBinary(num1))
 	second_val = list(intoBinary(num2))
-	print("First value {} (in binary): ".format(num1),first_val)
-	print("Second value {} (in binary): ".format(num2),second_val)
+	print("First value {} (in binary): ".format(first_val),first_val)
+	print("Second value {} (in binary): ",second_val)
 	print("\n")
 	for x in range(8):
 		print("Adder: ",x+1)
